@@ -49,7 +49,7 @@ class AdminReciclajesController extends \crocodicstudio\crudbooster\controllers\
         $columns[] = ['label' => 'Cantidad', 'name' => 'cantidad', 'type' => 'text', 'readonly' => false, 'required' => true];
         $columns[] = ['label' => 'Sub Total', 'name' => 'sub_total', 'type' => 'number', 'formula' => '[puntos] * [cantidad]', 'readonly' => true, 'required' => true];
         $this->form[] = ['label' => 'Detalles', 'name' => 'detalles', 'type' => 'child','columns' => $columns, 'width' => 'col-sm-5', 'table' => 'detalles_reciclaje', 'foreign_key' => 'reciclaje_id'];
-        $this->form[] = ['label' => 'Total de Puntos', 'name' => 'totalPuntos', 'type' => 'number', 'validation' => 'required|integer|min:0', 'width' => 'col-sm-5'];
+        $this->form[] = ['label' => 'Total de Puntos', 'name' => 'totalPuntos', 'type' => 'number', 'validation' => 'required|integer|min:1','readonly' => true, 'width' => 'col-sm-5'];
         # END FORM DO NOT REMOVE THIS LINE
 
         # OLD START FORM

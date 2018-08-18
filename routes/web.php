@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+    //dd(public_path('something'));
     return view('welcome');
 });
